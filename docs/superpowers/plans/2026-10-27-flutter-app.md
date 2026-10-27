@@ -63,7 +63,7 @@ Semua error: `{ "error": "pesan" }` → tampilkan `pesan` via SnackBar.
 ## Struktur file
 
 ```
-flutter/lib/
+VoucherUmrohHaji/mobile/lib/
 ├── main.dart                    # ProviderScope + MaterialApp + router root
 ├── core/
 │   ├── api_client.dart          # dio + interceptor refresh + attach token
@@ -88,9 +88,9 @@ flutter/lib/
 
 ### Task 1: Scaffold + core + tema
 
-**Files:** `flutter/` hasil `flutter create`, `pubspec.yaml`, `lib/main.dart`, `core/api_client.dart`, `core/token_storage.dart`, `core/rupiah.dart`, `core/tanggal.dart`, `core/widgets/balance_card.dart`
+**Files:** pakai scaffold yang sudah ada di `VoucherUmrohHaji/mobile/` (JANGAN `flutter create` lagi): `pubspec.yaml`, `lib/main.dart`, `lib/core/api_client.dart`, `lib/core/token_storage.dart`, `lib/core/rupiah.dart`, `lib/core/tanggal.dart`, `lib/core/widgets/balance_card.dart`
 
-- [ ] **Step 1:** `flutter create flutter --org id.haji --platforms android,ios` dari root repo. Deps: `flutter_riverpod`, `dio`, `flutter_secure_storage`, `intl`, `url_launcher`, `share_plus`.
+- [ ] **Step 1:** Dalam `VoucherUmrohHaji/mobile/` tambahkan deps: `flutter_riverpod`, `dio`, `flutter_secure_storage`, `intl`, `url_launcher`, `share_plus` (`flutter pub add ...`).
 - [ ] **Step 2:** `main.dart` — `ProviderScope`, `MaterialApp(theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF127A6B)), useMaterial3: true))`, home = placeholder autentikasi (Task 2).
 - [ ] **Step 3:** `api_client.dart` — dio `baseUrl = const String.fromEnvironment('API_BASE_URL', defaultValue: 'http://10.0.2.2:5080')`, interceptor: taruh `Authorization: Bearer <access>`; saat 401 → sekali `POST /api/auth/refresh` (lock agar tidak storm), simpan token baru, retry request; gagal → bersihkan storage + navigasi ke login.
 - [ ] **Step 4:** `BalanceCard` widget — Container gradient `0xFF0A7363 → 0xFF084A52` topLeft→bottomRight, radius 20, padding 24, kolom kiri: label (icon wallet + teks, putih 70%) + saldo `fontSize 31 bold` putih, `FittedBox` alignment kiri. API: `BalanceCard({required String title, required int amount})`.

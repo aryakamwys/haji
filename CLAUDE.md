@@ -1,7 +1,7 @@
 # VoucherUmrohHaji
 
 Produk: aplikasi jual-beli voucher top-up Umroh/Haji dengan cashback MLM berjenjang.
-Target produksi: **Flutter (folder `flutter/`)** + **ASP.NET Core Minimal API .NET 10 (folder `VoucherUmrohHaji/service`)** + **PostgreSQL** + pembayaran **Midtrans Snap** (sandbox dulu).
+Target produksi: **Flutter (folder `VoucherUmrohHaji/mobile/`)** + **ASP.NET Core Minimal API .NET 10 (folder `VoucherUmrohHaji/service`)** + **PostgreSQL** + pembayaran **Midtrans Snap** (sandbox dulu).
 
 Folder `VoucherUmrohHaji/*.swift` adalah demo SwiftUI lama — hanya referensi fitur, jangan dikembangkan lagi.
 

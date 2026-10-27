@@ -7,7 +7,7 @@ Tanggal: 2026-10-27 · Status: menunggu review user
 | Keputusan | Pilihan |
 |---|---|
 | Scope | Produksi penuh: pembayaran Midtrans Snap + webhook settlement + auth lengkap |
-| Frontend | Flutter, folder `flutter/`, mirror fitur demo SwiftUI |
+| Frontend | Flutter, folder `VoucherUmrohHaji/mobile/` (scaffold sudah ada), mirror fitur demo SwiftUI |
 | Backend | ASP.NET Core Minimal API (.NET 10), project `VoucherUmrohHaji/service` |
 | Database | PostgreSQL + EF Core (Npgsql) |
 | Arsitektur | Pendekatan A: Minimal API + folder per fitur, tanpa layer Repository/Interface tambahan |
@@ -26,17 +26,17 @@ Prinsip: **semua logic uang di server**. Flutter hanya menampilkan & mengirim re
 ├── docs/superpowers/specs/       # spec ini + implementation plan
 ├── VoucherUmrohHaji/
 │   ├── *.swift                   # demo lama (referensi, tidak dikembangkan)
-│   └── service/                  # BACKEND .NET 10
-│       ├── Program.cs
-│       ├── Features/             # Auth, Vouchers, Orders, Payments, Wallet, Referrals, Withdrawals, Admin
-│       ├── Data/                 # AppDbContext, entitas, migrasi, seed
-│       ├── Common/               # error handling, auth utils, Midtrans client
-│       └── service.csproj
-└── flutter/                      # FRONTEND Flutter
-    └── lib/
-        ├── core/                 # api client (dio), token storage, theme, format rupiah
-        ├── features/             # auth, shop, wallet, referral, withdraw, admin
-        └── main.dart
+│   ├── service/                  # BACKEND .NET 10
+│   │   ├── Program.cs
+│   │   ├── Features/             # Auth, Vouchers, Orders, Payments, Wallet, Referrals, Withdrawals, Admin
+│   │   ├── Data/                 # AppDbContext, entitas, migrasi, seed
+│   │   ├── Common/               # error handling, auth utils, Midtrans client
+│   │   └── service.csproj
+│   └── mobile/                   # FRONTEND Flutter
+│       └── lib/
+│           ├── core/             # api client (dio), token storage, theme, format rupiah
+│           ├── features/         # auth, shop, wallet, referral, withdraw, admin
+│           └── main.dart
 ```
 
 ## 3. Model data (PostgreSQL)
