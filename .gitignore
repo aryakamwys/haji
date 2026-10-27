@@ -1,0 +1,36 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.userosscache
+
+# Secrets & local config
+.env
+.env.*
+*.local.json
+appsettings.*.local.json
+user-secrets.json
+
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+.flutter-plugins.publisignore
+*.iml
+.gradle/
+*.jks
+key.properties
+
+# Swift / Xcode (legacy demo)
+xcuserdata/
+DerivedData/
+*.xcuserstate
+
+# IDE & OS
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
